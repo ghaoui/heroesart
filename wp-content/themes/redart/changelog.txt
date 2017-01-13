@@ -1,0 +1,20 @@
+***RedArt WordPress Theme Changelog ***
+
+2016.10.06 - version 1.2
+ * Dummy data content optimized
+ * SSL compatible updated
+ * Global page layout option updated
+ * Mailchimp updated to latest api 3.0
+ * Fontawesome css updated
+ * Updated latest version of all third party plugins
+ * Dummy content importer updated
+ * Unyson importer plugin included
+ * Some design tweaks updated
+
+2016.07.18 - version 1.1
+ * Dummy content files updated
+ * New demos included (Aquarium, Bike, Fitness, Model & Wine)
+ * Ultimate addons plugin compatibility
+
+2016.07.12 - version 1.0
+ * First release!
