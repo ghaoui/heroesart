@@ -128,4 +128,16 @@ if( function_exists( 'is_woocommerce' ) ){
 // Global Layout ---------------------------------------------------------------
 $page_layout = redart_option('pageoptions', 'global-layout');
 $GLOBALS['page_layout'] = !empty($page_layout) ? $page_layout : 'content-full-width';
-$GLOBALS['force_enable'] = redart_option('pageoptions', 'force-enable-global-layout'); ?>
+$GLOBALS['force_enable'] = redart_option('pageoptions', 'force-enable-global-layout'); 
+
+register_post_type( 'news',
+		array(
+		  'labels' => array(
+		    'name' => __( 'NEWS' )
+		  ),
+		  'public' => true,
+		  'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
+		  'hierarchical' => true
+		)
+	);
+?>

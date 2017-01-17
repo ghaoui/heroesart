@@ -2636,7 +2636,7 @@ transform: translateY(-8px) rotate(45deg);}
 .rotate-header #main-menu .menu li.menu-item-simple-parent, .rotate-header #main-menu .menu li.menu-item-megamenu-parent { float: left; margin: 0; padding: 0; position: relative; width: 14.286%; }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-	.rotate-header #main-menu .menu li.menu-item-simple-parent, .rotate-header #main-menu .menu li.menu-item-megamenu-parent { width: 14.285%;}
+	.rotate-header #main-menu .menu li.menu-item-simple-parent, .rotate-header #main-menu .menu li.menu-item-megamenu-parent { /* width: 14.285%;*/ width: calc(100% / 8);}
 }
 
 .rotate-header #main-menu .menu > li > a { font-size: 15px; display: block; font-weight: 600; margin: 0; line-height: normal; overflow: hidden; padding: 20px 0; text-align: center; text-overflow: ellipsis; white-space: nowrap;text-transform: uppercase; 
