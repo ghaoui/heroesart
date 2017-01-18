@@ -140,4 +140,48 @@ register_post_type( 'news',
 		  'hierarchical' => true
 		)
 	);
+register_post_type( 'music',
+		array(
+		  'labels' => array(
+		    'name' => __( 'Music' )
+		  ),
+		  'public' => true,
+		  'supports' => array('title'),
+		  'hierarchical' => true
+		)
+	);
+
+// custom add
+function my_assets() {  
+    wp_enqueue_style('jplayer_css', get_template_directory_uri() . '/css/jplayer.blue.monday.min.css', array(), '1.0.0', 'all');
+    wp_enqueue_style('mystyle_css', get_template_directory_uri() . '/css/mystyle.css', array(), '1.0.0', 'all');
+    wp_enqueue_script('jplayer_js', get_template_directory_uri() . '/js/jquery.jplayer.min.js', array(), '1', true);
+    wp_enqueue_script('jplaylist_js', get_template_directory_uri() . '/js/jplayer.playlist.min.js', array(), '1', true);
+    wp_enqueue_script('myscript', get_template_directory_uri() . '/js/myscript.js', array(), '1', true);
+    wp_localize_script('myscript', 'ajaxurl', admin_url( 'admin-ajax.php' ));
+}
+add_action( 'wp_enqueue_scripts', 'my_assets' );
+
+add_action( 'wp_ajax_get_music', 'get_music' );
+add_action( 'wp_ajax_nopriv_get_music', 'get_music' );
+function get_music(){
+	$args = array(
+	    'post_type' => 'music',
+            'posts_per_page' => -1,
+            'order' => 'ASC'
+	);
+	$the_query = new WP_Query($args);
+	$music = array();
+	$i = 0;
+	if ( $the_query->have_posts() ) :
+	while ( $the_query->have_posts() ) : $the_query->the_post(); 
+		$music[$i][] = get_the_title();
+		$music[$i][] = get_field('music_file');
+		$i++;
+	endwhile; 
+	wp_reset_postdata();
+	endif;	
+	echo json_encode($music);
+	die();
+}
 ?>

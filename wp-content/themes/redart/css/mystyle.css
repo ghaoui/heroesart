@@ -1,0 +1,13 @@
+/* custom css */
+.jp-volume-controls button,
+.jp-toggles button{
+    margin: 0 !important;
+    padding: 1px 6px !important;
+}
+.jp-controls button.jp-play{
+    padding: 1px 6px !important;
+    margin: 0 !important;
+}
+.jp-controls button{
+    padding: 1px 6px !important;
+}

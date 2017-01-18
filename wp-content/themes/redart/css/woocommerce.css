@@ -2351,7 +2351,7 @@ h3#ship-to-different-address label { color: inherit; }
 .woo-type2 ul.products li.product .product-details h5 { margin: 10px 0 0; text-transform: uppercase; }
 
 .woo-type2 ul.products li.product .product-details .product-price { position: absolute; bottom: 24px; left: 0; right: 0; }
-.woo-type2 ul.products li.product .price { font-size: 16px; letter-spacing: 0.4px; margin: 0; width: width: 100%; }
+.woo-type2 ul.products li.product .price { font-size: 16px; letter-spacing: 0.4px; margin: 0; width: 100%; }
 .woo-type2 ul.products li.product:hover .price { padding: 0; text-align: center; }
 
 .woo-type2 ul.products li.product .product-details .product-rating-wrapper { margin: 0 0 18px; position: static; opacity: 1; visibility: visible; }
